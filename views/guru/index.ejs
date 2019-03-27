@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <title>Data Guru SMK</title>
+  </head>
+  <body>
+    <div>
+    <!-- <a href="/users/logout/" class="exit"><b>Logout</b></a> -->
+    <a href="/users/logout/" class="exit"><button onclick="myFunction()"><b>Logout</b></button></a>
+    <script>
+function myFunction() {
+  alert(" <%= user.username %> You Get Logout Now");
+}
+</script>
+    <h4>Anda Login Sebagai <%= user.username %></h4>
+</div>
+    <h1>DATA KESELURUHAN GURU SMK</h1><br>
+    <table >
+    	<thead>
+    		<th>Nama</th>
+    		<th>Alamat</th>
+    		<th>Pelajaran</th>
+    		<th>Kelas</th>
+            <th>Bidang</th>
+            <th>Aksi</th>
+    	</thead>
+    	<tbody>
+    		<% for(let i=0; i < gurus.length; i++){ %>
+    		<tr>
+    			<td><%= gurus[i].nama %></td>
+    			<td><%= gurus[i].alamat %></td>
+    			<td><%= gurus[i].pelajaran %></td>
+                <td><%= gurus[i].kelas %></td>
+    			<td><%= gurus[i].Bidang.nama %></td>
+    			<td class="tex">
+                    <a href="/gurus/edit/<%=gurus[i].id %>"><button type="submit"><b>Edit</b></button></a>
+                    <a href="/gurus/delete/<%=gurus[i].id %>"><button type="submit"><b>Hapus</b></button></a>
+                </td>
+    		</tr>
+    		<% } %>
+    	</tbody>        
+    </table>
+    <div class="new"><br><br>
+    <p class="new"><b><i>Ingin Menambahkan Data Baru?</i></b></p>
+    <a href="/gurus/create"><button type="submit"><b>Disini</b></button></a>
+</div>
+
+  </body>
+</html>

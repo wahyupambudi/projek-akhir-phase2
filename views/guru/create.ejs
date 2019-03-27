@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/auth.css' />
+  </head>
+  <body>
+    <h1>TAMBAH GURU SMK</h1>
+    <form action="/gurus/create" method="POST">
+        <label>Nama : </label>
+        <input type="text" name="nama" />
+        <label>Alamat : </label>
+        <input type="text" name="alamat" />
+        <label>Pelajaran : </label>
+        <input type="text" name="pelajaran" />
+        <label>Kelas : </label>
+        <select name="kelas">
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+        <label>BidangId : </label>
+        <select name="bidangId">
+          <option>1</option>
+          <option>2</option>
+        </select>
+        <!-- <input type="text" name="bidangId" /> -->
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+  <br>
+    </div>
+    <fieldset>
+  <legend id="box1">
+    <p>
+      <strong id="warna">NOTE!!</strong>
+    </p>
+  </legend>
+      <li>BidangId 1 = Teknik</li><br>
+      <li>BidangId 2 = Bisnis Manajemen</li>
+  </fieldset>
+</div>
+  </body>
+</html>

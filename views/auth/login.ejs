@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/auth.css' />
+  </head>
+  <body>
+  
+    <h1>SELAMAT DATANG DI HALAMAN GURU SMK</h1>
+    <div id="box">
+    <h2 id="warna">LOGIN GURU SMK</h2>
+    <form action="/users/login" method="POST">
+        <label id="warna">Username</label>
+        <input placeholder="Name" type="text" name="username" required /><br><br>
+        <label id="warna">Password</label>
+        <input placeholder="Password" type="password" name="password" required /><br><br>
+        <button type="submit"><b>Submit</b></button>
+    </form>
+    <br>
+    <div>
+    <h4>Belum mempunyai akun? Silahkan Daftar</h4>
+    <a href="regis"><button type="submit"><b>Disini</b></button></a>
+  </div>
+  </body>
+</html>

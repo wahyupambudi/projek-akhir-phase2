@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/auth.css' />
+  </head>
+  <body>
+  </div>
+  <h1>Belum Punya Akun? Silahkan Registrasi</h1>
+    <div id="box">
+    <h2 id="warna">REGISTRASI GURU SMK</h2>
+    <form action="/users/regis" method="POST">
+        <label id="warna">Username</label>
+        <input placeholder="Name" type="text" name="username" required /><br><br>
+        <label id="warna">Password</label>
+        <input placeholder="Password" type="password" name="password" required /><br><br>
+        <button type="submit"><b>Submit</b></button>
+        <!-- <button type="submit" onclick="myFunction()"><b>Submit</b></button>
+        <script>
+          function myFunction() {
+            alert("Congratulation For Registration");
+          }
+        </script> -->    
+                    <!-- <a href="/users/login"><button type="submit"><b>Login</b></button></a> -->
+                             <input id="button" type="reset" value="Reset">
+
+    </form>
+  <h4>Sudah Punya Akun? Silahkan Login</h4>
+                    <a href="/users/login"><button type="submit"><b>Login</b></button></a>
+
+  </div>
+  
+
+  </body>
+</html>

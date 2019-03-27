@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/auth.css' />
+  </head>
+  <body>
+    <h1>EDIT GURU SMK</h1>
+    <div >
+    <form action="/gurus/edit/<%= guru.id %>" method="POST">
+        <label>Nama : </label>
+        <input type="text" name="nama" value="<%= guru.nama %>" />
+        <label>Alamat : </label>
+        <input type="text" name="alamat" value="<%= guru.alamat %>"/>
+        <label>Pelajaran : </label>
+        <input type="text" name="pelajaran" value="<%= guru.pelajaran %>"/>
+        <label>Kelas : </label>
+        <select name="kelas">
+          <!-- <option><%= guru.kelas %></option> -->
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+        </select>
+        <!-- <input type="text" name="kelas" value="<%= guru.kelas %>"/> -->
+        <label>BidangId : </label>
+        <select name="bidangId">
+          <option><%= guru.bidangId %></option>
+          <option>1</option>
+          <option>2</option>
+        </select>
+        <!-- <input type="text" name="bidangId" value="<%= guru.bidangId %>"/> -->
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    </div>
+    <fieldset>
+  <legend id="box1">
+    <p>
+      <strong id="warna">NOTE!!</strong>
+    </p>
+  </legend>
+      <li>BidangId 1 = Teknik</li><br>
+      <li>BidangId 2 = Bisnis Manajemen</li>
+  </fieldset>
+  </body>
+</html>
